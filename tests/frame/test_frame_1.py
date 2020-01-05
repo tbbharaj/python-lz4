@@ -7,19 +7,13 @@ from .helpers import get_frame_info_check
 
 test_data = [
     (b''),
-    (os.urandom(8 * 1024)),
+    (8 * os.urandom(1024)),
     (b'0' * 8 * 1024),
     (bytearray(b'')),
     (bytearray(os.urandom(8 * 1024))),
-    (os.urandom(128 * 1024)),
-    (os.urandom(256 * 1024)),
-    (os.urandom(512 * 1024)),
+    (memoryview(b'')),
+    (memoryview(8 * os.urandom(1024)))
 ]
-if sys.version_info > (2, 7):
-    test_data += [
-        (memoryview(b'')),
-        (memoryview(os.urandom(8 * 1024)))
-    ]
 
 
 @pytest.fixture(
