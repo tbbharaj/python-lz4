@@ -4,7 +4,7 @@ import os
 import struct
 
 test_data = [
-    (os.urandom(256 * 1024)),
+    (256 * os.urandom(1024)),
 ]
 
 
