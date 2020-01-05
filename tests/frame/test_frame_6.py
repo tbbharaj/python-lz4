@@ -4,7 +4,7 @@ import lz4.frame as lz4frame
 
 test_data = [
     b'',
-    (128 * (32 * os.urandom(32))),
+    # (128 * (32 * os.urandom(32))),
     (5 * 128 * os.urandom(1024)),
 ]
 
