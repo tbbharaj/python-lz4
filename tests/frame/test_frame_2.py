@@ -10,18 +10,14 @@ from . helpers import (
 
 test_data = [
     (b'', 1, 1),
-    (os.urandom(8 * 1024), 8, 1),
-    (os.urandom(8 * 1024), 1, 8),
-    (b'0' * 8 * 1024, 8, 1),
+    (8 * os.urandom(1024), 8, 1),
+    (8 * os.urandom(1024), 1, 8),
     (b'0' * 8 * 1024, 8, 1),
     (bytearray(b''), 1, 1),
-    (bytearray(os.urandom(8 * 1024)), 8, 1),
+    (bytearray(8 * os.urandom(1024)), 8, 1),
+    (memoryview(b''), 1, 1),
+    (memoryview(8 * os.urandom(1024)), 8, 1),
 ]
-if sys.version_info > (2, 7):
-    test_data += [
-        (memoryview(b''), 1, 1),
-        (memoryview(os.urandom(8 * 1024)), 8, 1)
-    ]
 
 
 @pytest.fixture(
