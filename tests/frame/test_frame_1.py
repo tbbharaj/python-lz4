@@ -1,6 +1,5 @@
 import lz4.frame as lz4frame
 import os
-import sys
 import pytest
 from .helpers import get_frame_info_check
 
