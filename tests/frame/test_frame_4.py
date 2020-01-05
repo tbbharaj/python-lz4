@@ -9,9 +9,9 @@ from . helpers import (
 test_data = [
     b'',
     (128 * (32 * os.urandom(32))),
-    (256 * (32 * os.urandom(32))),
-    (512 * (32 * os.urandom(32))),
-    (1024 * (32 * os.urandom(32))),
+    # (256 * (32 * os.urandom(32))),
+    # (512 * (32 * os.urandom(32))),
+    # (1024 * (32 * os.urandom(32))),
 ]
 
 
